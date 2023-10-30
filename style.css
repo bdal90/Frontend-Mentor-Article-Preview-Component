@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:hsl(210, 46%, 95%);
+}
+
+.container {
+    width: 55vw;
+    height: 45vh;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px 5px 8px rgb(221, 222, 224);
+    font-family: 'Manrope', sans-serif;
+}
+
+.image {
+    background-image: url(images/drawers.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 45%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.description {
+    display: flex;
+    width: 64%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 30px 50px 10px 50px;
+    color: hsl(217, 19%, 35%);
+}
+
+.first-heading {
+    font-size: 23px;
+    max-width: 27ch;
+}
+
+.text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: hsl(214, 17%, 51%)
+    max-width: 70ch;
+}
+
+.profile {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 50% 50%;
+    align-items: center;
+    font-size: 13px;
+}
+
+.avatar {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    width: 60%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.name {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    font-weight: 700;
+    align-self: end;
+}
+
+.date {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    align-self: center;
+    color: hsl(214, 17%, 51%);
+}
+
+.share {
+    border: none;
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+    width: 45%;
+    height: 70%;
+    text-align: center;
+    background-color: hsl(204, 24%, 92%);
+    border-radius: 50%;
+    margin: auto;
+    transition: all 0.5s;
+}
+
+.fa-share {
+    color: hsl(214, 17%, 51%);
+}
+
+.share:hover,
+.share:focus {
+    background-color: hsl(214, 17%, 51%);
+    cursor: pointer;
+    color: white;
+}
+
+.social-media {
+    position: absolute;
+    background-color:hsl(217, 19%, 35%);
+    height: 8%;
+    width: 19%;
+    border-radius: 7px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+    color: hsl(210, 8%, 79%);
+    font-size: 14px;
+    letter-spacing: 5px;
+    bottom: 43.2%;
+    right: 19%;
+}
+
+.fa-caret-down {
+    color: hsl(217, 19%, 35%);
+    font-size: 30px;
+    position: absolute;
+    bottom: 40.7%;
+    right: 27.8%;
+}
+
+.facebook,
+.twitter,
+.pinterest:hover {
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    color: hsl(217, 19%, 35%);
+    margin: 10px;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1160px) {
+    .container {
+        flex-direction: column;
+        height: 90%;
+    }
+
+    .image {
+        width: 100%;
+        height: 40%;
+        background-position: center;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .description {
+        width: 100%;
+        height: 60%;
+        gap: 10px
+    }
+
+    .social-media {
+        bottom: 22%;
+        right: 21%;
+    }
+
+    .fa-caret-down {
+        bottom: 19.1%;
+        right: 30%;
+    }
+}
+
+@media (max-width: 770px) {
+    .container {
+        width: 85%;
+        height: 78%;
+    }
+
+    .description {
+        height: 55%;
+        justify-content: flex-start;
+        gap: 10%;
+        padding: 45px 25px 0 50px;
+        position: relative;
+    }
+
+    .image {
+        height: 44%;
+    }
+
+    .social-media {
+        width: 100%;
+        height: 25%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+
+    .hidden{
+        display: none;
+    }
+
+    .fa-caret-down {
+        display: none;
+    }
+
+    footer {
+        display: none;
+    }
+}
+
+@media (max-width: 515px) {
+    .container {
+        height: 78%;
+    }
+
+    .description {
+        justify-content: flex-start;
+        gap: 5%;
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 405px) {
+    .container {
+        height: 95%;
+    }
+
+    .description {
+        gap: 35px;
+    }
+    
+}
